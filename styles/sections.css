@@ -9,6 +9,13 @@
     overflow: hidden;
     position: relative;
 
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -26,6 +33,10 @@
       bottom: 0;
 
       padding: 24px;
+
+      &:has(.text-lg) {
+        padding: 12px;
+      }
 
       h2 {
         margin-top: 8px;
